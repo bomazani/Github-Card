@@ -1,3 +1,24 @@
+#profile {
+  background-color: rgb(103, 191, 231);
+  border: 10px;
+  padding: 10px;
+}
+
+#image {
+  border:  2px double rgb(235, 8, 103);
+  display:flex;
+  flex-align: center;
+  width: 60%;
+
+}
+
+img {
+  width: 100%;
+}
+
+
+
+
 .App {
   text-align: center;
 }
@@ -8,21 +29,10 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: rgb(235, 8, 103);
+  height: 50px;
   padding: 20px;
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
-}
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}

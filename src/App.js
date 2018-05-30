@@ -27,29 +27,53 @@ class App extends Component {
     })
   }
 
-
+  logOffClick = () => {
+    
+      this.setState({
+        user: {},
+        active:false
+      });
+      // console.log(this.state.user.login);
+  }
+  
 
   render() { 
     return (
       <div> 
+        <h3> Select a button: </h3>
         <button onClick={this.handleClick}>
-          Click Here
+          Activate
         </button>
-        <h1>Hello!</h1>
-        {this.state.active = true && 
-        <h2>
-          {this.state.user.login} is currently active!
-        </h2>
+        <button onClick={this.logOffClick}>
+          Deactivate
+        </button>
+        <h1></h1>
+
+        {this.state.active && 
+          <div id="profile">
+            <h1 class="App-header">
+              Hello, {this.state.user.login}!
+            </h1>
+            <h2>
+              You are currently active!  
+            </h2>
+            <h2> Your image: </h2>
+            <div id="image">
+              <img src={this.state.user.avatar_url} />
+            </div>
+            <h2>Your real name is: {this.state.user.name} </h2>
+            <h2>You are located in {this.state.user.location} </h2>
+            <h2>Your Bio:</h2>
+            <h3>{this.state.user.bio}</h3>
+          </div>
         }
-        
-        {this.state.active = false &&
-        <h2>
-          Nobody is currently active.
-        </h2>
-        }
+
+
       </div>
     );
   }
 }
+
+
 
 export default App;
